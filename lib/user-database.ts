@@ -1,11 +1,15 @@
 "use client"
 
+import { sendConfirmationEmail, generateConfirmationToken } from "./email-service"
+
 export interface UserAccount {
   id: string
   email: string
   password: string // Em produção, seria hash
   name: string
   createdAt: number
+  isEmailConfirmed: boolean
+  confirmationToken?: string // Adicionando token de confirmação
 }
 
 export interface AuthSession {
@@ -18,23 +22,12 @@ export interface AuthSession {
 const USERS_KEY = "plantas-users-db"
 const AUTH_KEY = "plantas-auth"
 
-// Simula envio de email de confirmação
-export function sendConfirmationEmail(email: string): Promise<boolean> {
-  return new Promise((resolve) => {
-    // Simula delay de envio de email
-    setTimeout(() => {
-      console.log(`[v0] Email de confirmação enviado para: ${email}`)
-      resolve(true)
-    }, 1000)
-  })
-}
-
 export function createUser(
   email: string,
   password: string,
   name: string,
-): Promise<{ success: boolean; message: string }> {
-  return new Promise((resolve) => {
+): Promise<{ success: boolean; message: string; requiresConfirmation?: boolean }> {
+  return new Promise(async (resolve) => {
     try {
       const users = getUsers()
 
@@ -44,18 +37,39 @@ export function createUser(
         return
       }
 
+      const confirmationToken = generateConfirmationToken()
+
       const newUser: UserAccount = {
         id: Date.now().toString(),
         email,
         password, // Em produção, seria hash da senha
         name,
         createdAt: Date.now(),
+        isEmailConfirmed: false, // Usuário precisa confirmar email
+        confirmationToken, // Salva token de confirmação
       }
 
       users.push(newUser)
       localStorage.setItem(USERS_KEY, JSON.stringify(users))
 
-      resolve({ success: true, message: "Usuário criado com sucesso" })
+      const emailResult = await sendConfirmationEmail(email, name, confirmationToken)
+
+      if (emailResult.success) {
+        resolve({
+          success: true,
+          message: "Conta criada! Verifique seu email para confirmar o cadastro.",
+          requiresConfirmation: true,
+        })
+      } else {
+        // Remove usuário se não conseguiu enviar email
+        const updatedUsers = users.filter((u) => u.id !== newUser.id)
+        localStorage.setItem(USERS_KEY, JSON.stringify(updatedUsers))
+
+        resolve({
+          success: false,
+          message: emailResult.message,
+        })
+      }
     } catch (error) {
       resolve({ success: false, message: "Erro ao criar usuário" })
     }
@@ -71,13 +85,46 @@ export function authenticateUser(
       const users = getUsers()
       const user = users.find((u) => u.email === email && u.password === password)
 
-      if (user) {
-        resolve({ success: true, message: "Login realizado com sucesso", user })
-      } else {
+      if (!user) {
         resolve({ success: false, message: "Email ou senha incorretos" })
+        return
       }
+
+      if (!user.isEmailConfirmed) {
+        resolve({
+          success: false,
+          message: "Por favor, confirme seu email antes de fazer login. Verifique sua caixa de entrada.",
+        })
+        return
+      }
+
+      resolve({ success: true, message: "Login realizado com sucesso", user })
     } catch (error) {
       resolve({ success: false, message: "Erro ao fazer login" })
+    }
+  })
+}
+
+export function confirmEmail(token: string): Promise<{ success: boolean; message: string }> {
+  return new Promise((resolve) => {
+    try {
+      const users = getUsers()
+      const userIndex = users.findIndex((u) => u.confirmationToken === token)
+
+      if (userIndex === -1) {
+        resolve({ success: false, message: "Token de confirmação inválido ou expirado" })
+        return
+      }
+
+      // Confirma o email do usuário
+      users[userIndex].isEmailConfirmed = true
+      users[userIndex].confirmationToken = undefined
+
+      localStorage.setItem(USERS_KEY, JSON.stringify(users))
+
+      resolve({ success: true, message: "Email confirmado com sucesso! Agora você pode fazer login." })
+    } catch (error) {
+      resolve({ success: false, message: "Erro ao confirmar email" })
     }
   })
 }

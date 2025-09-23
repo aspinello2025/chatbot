@@ -6,7 +6,7 @@ import { Leaf, Eye, EyeOff, Mail, User, Lock } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { createUser, sendConfirmationEmail, validateEmail, validatePassword } from "@/lib/user-database"
+import { createUser, validateEmail, validatePassword } from "@/lib/user-database"
 
 interface RegisterFormProps {
   onRegisterSuccess: () => void
@@ -58,17 +58,13 @@ export function RegisterForm({ onRegisterSuccess, onBackToLogin }: RegisterFormP
     }
 
     try {
-      // Simula envio de email
-      await sendConfirmationEmail(formData.email)
-
-      // Cria usuário
       const result = await createUser(formData.email, formData.password, formData.name)
 
       if (result.success) {
         setSuccess(true)
         setTimeout(() => {
-          onRegisterSuccess()
-        }, 2000)
+          onBackToLogin() // Volta para tela de login
+        }, 5000)
       } else {
         setError(result.message)
       }
@@ -90,14 +86,23 @@ export function RegisterForm({ onRegisterSuccess, onBackToLogin }: RegisterFormP
               </div>
             </div>
             <div>
-              <CardTitle className="text-2xl font-bold text-green-600">Conta Criada!</CardTitle>
-              <CardDescription>Um email de confirmação foi enviado para {formData.email}</CardDescription>
+              <CardTitle className="text-2xl font-bold text-green-600">Verifique seu Email!</CardTitle>
+              <CardDescription>
+                Enviamos um link de confirmação para <strong>{formData.email}</strong>
+              </CardDescription>
             </div>
           </CardHeader>
-          <CardContent className="text-center">
-            <p className="text-sm text-muted-foreground mb-4">Você será redirecionado para o login em instantes...</p>
+          <CardContent className="text-center space-y-4">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
+              <p className="text-sm text-blue-700 dark:text-blue-300">
+                <strong>Importante:</strong> Clique no link do email para ativar sua conta antes de fazer login.
+              </p>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              Não recebeu o email? Verifique sua caixa de spam ou tente novamente.
+            </p>
             <Button onClick={onBackToLogin} variant="outline" className="w-full bg-transparent">
-              Ir para Login
+              Voltar para Login
             </Button>
           </CardContent>
         </Card>
