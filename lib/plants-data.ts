@@ -6,6 +6,7 @@ export interface Plant {
   modoPreparo: string
   contraindicacoes: string
   tagsDoencas: string
+  propriedadesNutritivas: string
 }
 
 export interface DiseaseCategory {
@@ -33,6 +34,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pessoas alérgicas a plantas da família Asteraceae devem evitar. Pode potencializar o efeito de medicamentos sedativos.",
     tagsDoencas: "ansiedade, insônia, digestão, gastrite, cólicas, inflamação",
+    propriedadesNutritivas:
+      "Rica em flavonoides (apigenina, luteolina), óleos essenciais (bisabolol, camazuleno), cumarinas, mucilagens e taninos. Contém propriedades antioxidantes, anti-inflamatórias e calmantes naturais.",
   },
   {
     id: 2,
@@ -43,6 +46,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas frescas ou secas para 1 xícara de água fervente. Infusão por 5-10 minutos. Tome após as refeições.",
     contraindicacoes: "Evitar em casos de refluxo gastroesofágico severo. Pode causar azia em pessoas sensíveis.",
     tagsDoencas: "digestão, náusea, dor de cabeça, resfriado, congestão, mau hálito",
+    propriedadesNutritivas:
+      "Rica em mentol, mentona, ácido rosmarínico, flavonoides e taninos. Fonte de vitamina A, C, ferro, manganês e folato. Possui propriedades antiespasmódicas, carminativas e refrescantes.",
   },
   {
     id: 3,
@@ -55,6 +60,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pode causar sonolência. Evitar antes de dirigir ou operar máquinas. Gestantes devem consultar médico.",
     tagsDoencas: "ansiedade, estresse, insônia, dor de cabeça, queimaduras, picadas",
+    propriedadesNutritivas:
+      "Rica em linalol, acetato de linalila, cânfora, flavonoides e taninos. Contém propriedades sedativas, antissépticas e cicatrizantes. Fonte natural de compostos aromáticos terapêuticos.",
   },
   {
     id: 4,
@@ -67,6 +74,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pessoas com úlceras gástricas, cálculos biliares ou que tomam anticoagulantes devem evitar. Pode aumentar a pressão arterial.",
     tagsDoencas: "náusea, enjoo, digestão, gripe, resfriado, inflamação, dor articular",
+    propriedadesNutritivas:
+      "Rico em gingerol, shogaol, zingerona, vitamina C, magnésio, potássio e manganês. Contém compostos fenólicos com propriedades anti-inflamatórias, antioxidantes e termogênicas.",
   },
   {
     id: 5,
@@ -79,6 +88,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes e lactantes devem evitar uso interno. Pode causar diarreia e cólicas intestinais em excesso.",
     tagsDoencas: "queimaduras, cortes, eczema, psoríase, constipação, cicatrização",
+    propriedadesNutritivas:
+      "Rica em polissacarídeos (acemanano), aminoácidos essenciais, vitaminas A, C, E, B12, ácido fólico, minerais como cálcio, magnésio, zinco e selênio. Contém enzimas digestivas e propriedades hidratantes.",
   },
   {
     id: 6,
@@ -89,6 +100,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 2 colheres de sopa de folhas frescas para 1 xícara de água fervente. Infusão por 10 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pode potencializar medicamentos sedativos. Pessoas com hipotireoidismo devem usar com cautela.",
     tagsDoencas: "ansiedade, nervosismo, insônia, digestão, herpes",
+    propriedadesNutritivas:
+      "Rica em ácido rosmarínico, citral, geraniol, flavonoides e taninos. Fonte de vitamina C, cálcio e magnésio. Possui propriedades antivirais, antioxidantes e neuroprotectoras.",
   },
   {
     id: 7,
@@ -101,6 +114,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Não usar em crianças menores de 2 anos. Pode causar irritação em peles sensíveis. Evitar uso interno em excesso.",
     tagsDoencas: "tosse, bronquite, sinusite, resfriado, respiratório, expectorante",
+    propriedadesNutritivas:
+      "Rico em eucaliptol (1,8-cineol), alfa-pineno, taninos e flavonoides. Contém propriedades antimicrobianas, expectorantes e anti-inflamatórias. Fonte de compostos voláteis terapêuticos.",
   },
   {
     id: 8,
@@ -113,6 +128,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes, lactantes e pessoas com obstrução biliar devem evitar. Não usar por períodos prolongados.",
     tagsDoencas: "digestão, fígado, vesícula, gases, constipação, má digestão",
+    propriedadesNutritivas:
+      "Rico em boldina, flavonoides, óleos essenciais e taninos. Contém propriedades hepatoprotetoras, coleréticas e antioxidantes. Estimula a produção de bile e melhora a digestão de gorduras.",
   },
   {
     id: 9,
@@ -124,6 +141,8 @@ export const plantsDatabase: Plant[] = [
       "Xarope: ferva 100g de folhas em 500ml de água até reduzir pela metade. Coe e adicione açúcar. Tome 1 colher de sopa 3 vezes ao dia.",
     contraindicacoes: "Pessoas com problemas de coagulação devem evitar. Pode causar náuseas em doses elevadas.",
     tagsDoencas: "tosse, bronquite, asma, gripe, resfriado, expectorante, respiratório",
+    propriedadesNutritivas:
+      "Rico em cumarinas, flavonoides, saponinas e óleos essenciais. Contém propriedades broncodilatadoras, expectorantes e anti-inflamatórias. Fonte de compostos que auxiliam na função respiratória.",
   },
   {
     id: 10,
@@ -134,6 +153,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome 30 minutos antes das refeições.",
     contraindicacoes: "Gestantes e lactantes devem evitar. Pode interferir na absorção de alguns medicamentos.",
     tagsDoencas: "gastrite, úlcera, azia, má digestão, estômago, protetor gástrico",
+    propriedadesNutritivas:
+      "Rica em taninos, flavonoides, triterpenos e mucilagens. Contém propriedades gastroprotetoras, anti-inflamatórias e cicatrizantes. Forma uma película protetora na mucosa gástrica.",
   },
   {
     id: 11,
@@ -145,6 +166,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Não usar em feridas abertas. Evitar uso interno. Pode causar irritação em peles sensíveis. Gestantes devem evitar.",
     tagsDoencas: "contusão, hematoma, dor muscular, dor articular, inflamação, trauma",
+    propriedadesNutritivas:
+      "Rica em lactonas sesquiterpênicas (helenalina), flavonoides, carotenoides e ácidos fenólicos. Contém propriedades anti-inflamatórias, analgésicas e estimulantes da circulação local.",
   },
   {
     id: 12,
@@ -155,6 +178,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: corte a folha e aplique o gel diretamente na pele. Para cabelos: misture o gel com água e aplique como máscara.",
     contraindicacoes: "Evitar uso interno sem orientação médica. Pode causar reações alérgicas em pessoas sensíveis.",
     tagsDoencas: "queimadura solar, ferida, pele seca, cabelo ressecado, cicatrização",
+    propriedadesNutritivas:
+      "Rica em polissacarídeos (acemanano), aminoácidos, vitaminas A, C, E, minerais como zinco e selênio. Contém enzimas, ligninas e saponinas com propriedades hidratantes e regenerativas.",
   },
   {
     id: 13,
@@ -165,6 +190,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 2-3 folhas frescas ou 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com moderação. Pode potencializar medicamentos sedativos.",
     tagsDoencas: "ansiedade, insônia, digestão, dor de cabeça, calmante, nervosismo",
+    propriedadesNutritivas:
+      "Rico em citral, geraniol, limoneno, flavonoides e vitamina C. Contém propriedades sedativas, digestivas e antioxidantes. Fonte de óleos essenciais com ação calmante.",
   },
   {
     id: 14,
@@ -177,6 +204,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pessoas com cálculos biliares ou obstrução intestinal devem evitar. Pode interagir com medicamentos diuréticos.",
     tagsDoencas: "retenção de líquidos, fígado, digestão, depuração, diurético, inchaço",
+    propriedadesNutritivas:
+      "Rico em vitaminas A, C, K, ferro, cálcio, potássio e inulina. Contém taraxacina, flavonoides e ácidos fenólicos. Excelente fonte de betacaroteno e propriedades depurativas.",
   },
   {
     id: 15,
@@ -188,6 +217,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Pessoas alérgicas a anis devem evitar. Pode potencializar medicamentos estrogênicos.",
     tagsDoencas: "cólicas, gases, tosse, bronquite, digestão, expectorante, respiratório",
+    propriedadesNutritivas:
+      "Rica em anetol, estragol, flavonoides e óleos essenciais. Contém cálcio, ferro, magnésio e vitamina C. Possui propriedades carminativas, antiespasmódicas e galactagogas.",
   },
   {
     id: 16,
@@ -198,6 +229,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome antes das refeições.",
     contraindicacoes: "Pessoas com obstrução biliar devem evitar. Pode causar gases em excesso.",
     tagsDoencas: "fígado, colesterol, digestão, desintoxicação, vesícula",
+    propriedadesNutritivas:
+      "Rica em cinarina, ácido clorogênico, inulina, flavonoides e fibras. Fonte de vitamina C, folato, magnésio e potássio. Contém propriedades hepatoprotetoras e hipocolesterolemiantes.",
   },
   {
     id: 17,
@@ -208,6 +241,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Para cabelo: enxágue após lavagem.",
     contraindicacoes: "Gestantes e pessoas com pressão alta devem evitar. Pode causar irritação em peles sensíveis.",
     tagsDoencas: "memória, concentração, circulação, dor muscular, queda de cabelo",
+    propriedadesNutritivas:
+      "Rico em ácido rosmarínico, carnosol, cineol, cânfora e flavonoides. Fonte de ferro, cálcio e vitamina B6. Contém potentes propriedades antioxidantes e neuroprotectoras.",
   },
   {
     id: 18,
@@ -218,6 +253,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de flores secas para 1 xícara de água quente. Óleo essencial: algumas gotas no travesseiro ou banho.",
     contraindicacoes: "Pode causar sonolência. Evitar em doses altas durante a gravidez.",
     tagsDoencas: "ansiedade, insônia, feridas, queimaduras, dor de cabeça, relaxante",
+    propriedadesNutritivas:
+      "Rica em linalol, acetato de linalila, cânfora e taninos. Contém flavonoides, cumarinas e propriedades sedativas. Fonte de compostos aromáticos com ação calmante e cicatrizante.",
   },
   {
     id: 19,
@@ -228,6 +265,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de raiz seca para 1 xícara de água fervente. Ferva por 10 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Gestantes devem evitar. Pode aumentar a sensibilidade ao sol.",
     tagsDoencas: "digestão, tosse, bronquite, ansiedade, expectorante",
+    propriedadesNutritivas:
+      "Rica em cumarinas, óleos essenciais, angelicina e flavonoides. Contém propriedades digestivas, expectorantes e fotossensibilizantes. Fonte de compostos bioativos únicos.",
   },
   {
     id: 20,
@@ -238,6 +277,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 estrela inteira para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Não confundir com anis-estrelado japonês (tóxico). Evitar em excesso durante a gravidez.",
     tagsDoencas: "tosse, bronquite, gases, cólicas, expectorante, respiratório",
+    propriedadesNutritivas:
+      "Rico em anetol, ácido shiquímico, limoneno e flavonoides. Contém propriedades antivirais, expectorantes e carminativas. Fonte natural de ácido shiquímico (precursor do Tamiflu).",
   },
   {
     id: 21,
@@ -248,6 +289,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome 2 vezes ao dia.",
     contraindicacoes: "Gestantes e lactantes devem evitar completamente. Pode causar aborto.",
     tagsDoencas: "cólicas menstruais, digestão, vermes, fígado, menstruação",
+    propriedadesNutritivas:
+      "Rica em artemisinina, cineol, tujona e flavonoides. Contém vitamina A, C, ferro e cálcio. Possui propriedades emenagoga, vermífuga e digestiva.",
   },
   {
     id: 22,
@@ -258,6 +301,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de raiz seca para 1 xícara de água. Ferva por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com diabetes devem monitorar glicemia. Pode interagir com medicamentos diuréticos.",
     tagsDoencas: "acne, eczema, furúnculos, artrite, pele, depuração do sangue",
+    propriedadesNutritivas:
+      "Rica em inulina, mucilagens, taninos e ácidos fenólicos. Fonte de potássio, ferro, magnésio e vitaminas do complexo B. Contém propriedades depurativas e anti-inflamatórias.",
   },
   {
     id: 23,
@@ -268,6 +313,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: pomada ou óleo. Chá: 1 colher de sopa de flores secas para 1 xícara de água fervente. Infusão por 10 minutos.",
     contraindicacoes: "Pessoas alérgicas a plantas da família Asteraceae devem evitar.",
     tagsDoencas: "feridas, queimaduras, eczema, úlceras, inflamação, cicatrização",
+    propriedadesNutritivas:
+      "Rica em carotenoides, flavonoides, saponinas e óleos essenciais. Contém calendulina, ácido salicílico e propriedades cicatrizantes. Fonte de betacaroteno e luteína.",
   },
   {
     id: 24,
@@ -278,6 +325,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 pau de canela para 1 xícara de água. Ferva por 10 minutos. Pode adicionar a alimentos e bebidas.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode interagir com medicamentos para diabetes.",
     tagsDoencas: "diabetes, digestão, resfriado, dores menstruais, circulação",
+    propriedadesNutritivas:
+      "Rica em cinamaldeído, eugenol, cânfora e taninos. Fonte de cálcio, ferro, manganês e fibras. Contém propriedades hipoglicemiantes, termogênicas e antioxidantes.",
   },
   {
     id: 25,
@@ -288,6 +337,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas frescas para 1 xícara de água fervente. Infusão por 10 minutos. Uso tópico: suco das folhas.",
     contraindicacoes: "Pessoas com úlceras gástricas devem evitar. Pode causar irritação gástrica em excesso.",
     tagsDoencas: "infecções respiratórias, cistite, feridas, queda de cabelo, antibiótico",
+    propriedadesNutritivas:
+      "Rica em vitamina C, glucosinolatos, flavonoides e carotenoides. Contém benzil isotiocianato com propriedades antibióticas. Fonte de ferro, cálcio e antioxidantes.",
   },
   {
     id: 26,
@@ -299,6 +350,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes e pessoas com pressão baixa devem evitar. Pode potencializar medicamentos hipoglicemiantes.",
     tagsDoencas: "fígado, digestão, diabetes, obesidade, hepatoprotetor",
+    propriedadesNutritivas:
+      "Rica em flavonoides, saponinas, taninos e óleos essenciais. Contém propriedades hepatoprotetoras, hipoglicemiantes e digestivas. Fonte de compostos bioativos únicos.",
   },
   {
     id: 27,
@@ -309,6 +362,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de planta seca para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com problemas cardíacos ou renais devem evitar. Não usar por períodos prolongados.",
     tagsDoencas: "retenção de líquidos, cistite, unhas fracas, cabelo, diurético",
+    propriedadesNutritivas:
+      "Rica em sílica, potássio, flavonoides e saponinas. Excelente fonte de minerais como ferro, manganês e magnésio. Contém propriedades remineralizantes e diuréticas.",
   },
   {
     id: 28,
@@ -319,6 +374,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Uso tópico: extrato em cremes.",
     contraindicacoes: "Gestantes devem evitar. Pode causar sonolência em doses altas.",
     tagsDoencas: "varizes, celulite, feridas, memória, circulação, cicatrização",
+    propriedadesNutritivas:
+      "Rica em saponinas triterpênicas (asiaticoside, madecassoside), flavonoides e aminoácidos. Contém propriedades cicatrizantes, neuroprotectoras e estimulantes da circulação.",
   },
   {
     id: 29,
@@ -329,6 +386,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com cautela. Pode potencializar medicamentos diuréticos.",
     tagsDoencas: "problemas renais, artrite, reumatismo, depuração do sangue, diurético",
+    propriedadesNutritivas:
+      "Rica em flavonoides, taninos, saponinas e óleos essenciais. Contém propriedades depurativas, diuréticas e anti-inflamatórias. Fonte de compostos bioativos específicos.",
   },
   {
     id: 30,
@@ -340,6 +399,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "NUNCA usar internamente. Pode causar danos hepáticos graves. Apenas uso tópico em feridas fechadas.",
     tagsDoencas: "feridas, fraturas, contusões, úlceras de pele, dores articulares, cicatrização",
+    propriedadesNutritivas:
+      "Rica em alantoína, mucilagens, taninos e alcaloides pirrolizidínicos (tóxicos). Contém propriedades cicatrizantes potentes, mas uso restrito ao tópico devido à toxicidade.",
   },
   {
     id: 31,
@@ -350,6 +411,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 3-4 cravos para 1 xícara de água fervente. Infusão por 10 minutos. Para dor de dente: mascar 1 cravo.",
     contraindicacoes: "Pode causar irritação em mucosas sensíveis. Evitar em excesso durante a gravidez.",
     tagsDoencas: "dor de dente, mau hálito, digestão, infecções, analgésico",
+    propriedadesNutritivas:
+      "Rico em eugenol, acetato de eugenila, cariofileno e taninos. Fonte de manganês, vitamina K e fibras. Contém propriedades analgésicas, antissépticas e antioxidantes.",
   },
   {
     id: 32,
@@ -360,6 +423,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de pó para 1 xícara de água quente com pimenta-do-reino. Pode ser adicionada a alimentos.",
     contraindicacoes: "Pessoas com cálculos biliares devem evitar. Pode potencializar medicamentos anticoagulantes.",
     tagsDoencas: "artrite, inflamação, digestão, feridas, fígado, anti-inflamatório",
+    propriedadesNutritivas:
+      "Rica em curcumina, turmerona, cineol e vitamina C. Fonte de ferro, manganês, potássio e fibras. Contém potentes propriedades anti-inflamatórias e antioxidantes.",
   },
   {
     id: 33,
@@ -370,6 +435,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode causar fotossensibilidade.",
     tagsDoencas: "gases, cólicas intestinais, má digestão, soluços, digestivo",
+    propriedadesNutritivas:
+      "Rico em carvona, limoneno, flavonoides e vitamina C. Fonte de cálcio, ferro, manganês e fibras. Contém propriedades carminativas, antiespasmódicas e digestivas.",
   },
   {
     id: 34,
@@ -380,6 +447,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de raiz seca para 1 xícara de água fervente. Ferva por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com doenças autoimunes devem evitar. Não usar por mais de 8 semanas consecutivas.",
     tagsDoencas: "resfriados, gripes, infecções, imunidade, sistema imunológico",
+    propriedadesNutritivas:
+      "Rica em polissacarídeos, glicoproteínas, alquilamidas e flavonoides. Contém propriedades imunoestimulantes, anti-inflamatórias e antivirais. Fonte de compostos que auxiliam na defesa do organismo.",
   },
   {
     id: 35,
@@ -390,6 +459,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome em jejum.",
     contraindicacoes: "Gestantes e crianças pequenas devem evitar. Pode ser tóxica em doses altas.",
     tagsDoencas: "vermes intestinais, gases, cólicas, digestão, vermífugo",
+    propriedadesNutritivas:
+      "Rica em ascaridol, cineol, tujona e flavonoides. Contém propriedades vermífugas, antiespasmódicas e digestivas. Usar com cautela devido à toxicidade potencial.",
   },
   {
     id: 36,
@@ -400,6 +471,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de flores secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pode interagir com muitos medicamentos. Causa fotossensibilidade. Consulte médico antes do uso.",
     tagsDoencas: "depressão, ansiedade, feridas, queimaduras, antidepressivo",
+    propriedadesNutritivas:
+      "Rica em hipericina, hiperforina, flavonoides e taninos. Contém propriedades antidepressivas, ansiolíticas e cicatrizantes. Potencializa a ação da serotonina no cérebro.",
   },
   {
     id: 37,
@@ -410,6 +483,8 @@ export const plantsDatabase: Plant[] = [
       "Chimarrão: água a 70-80°C sobre a erva. Chá: 1 colher de sopa para 1 xícara de água quente. Infusão por 5 minutos.",
     contraindicacoes: "Pessoas com insônia, ansiedade ou problemas cardíacos devem evitar. Contém cafeína.",
     tagsDoencas: "fadiga, obesidade, retenção de líquidos, concentração, estimulante",
+    propriedadesNutritivas:
+      "Rica em cafeína, teobromina, teofilina, saponinas e polifenóis. Fonte de vitaminas A, C, E, B1, B2, B3, B5, B6, C, E, K e minerais como potássio, magnésio e manganês. Contém propriedades estimulantes e antioxidantes.",
   },
   {
     id: 38,
@@ -421,6 +496,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Pessoas com epilepsia devem evitar. Pode ter efeito estrogênico.",
     tagsDoencas: "gases, cólicas, má digestão, produção de leite, digestivo",
+    propriedadesNutritivas:
+      "Rico em anetol, estragol, flavonoides e óleos essenciais. Fonte de cálcio, ferro, magnésio e vitamina C. Possui propriedades carminativas, antiespasmódicas e galactagogas.",
   },
   {
     id: 39,
@@ -431,6 +508,8 @@ export const plantsDatabase: Plant[] = [
       "Extrato padronizado: seguir orientação médica. Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Pode interagir com anticoagulantes. Pessoas com epilepsia devem evitar.",
     tagsDoencas: "memória, concentração, vertigens, zumbido no ouvido, circulação cerebral",
+    propriedadesNutritivas:
+      "Rica em ginkgolídeos, bilobalídeos, flavonoides e lactonas terpênicas. Contém propriedades antioxidantes e anti-inflamatórias. Melhora a circulação sanguínea, especialmente no cérebro.",
   },
   {
     id: 40,
@@ -440,6 +519,8 @@ export const plantsDatabase: Plant[] = [
     modoPreparo: "Chá: 1 colher de chá de raiz seca para 1 xícara de água. Ferva por 15 minutos. Tome pela manhã.",
     contraindicacoes: "Pessoas com pressão alta, insônia ou ansiedade devem evitar. Pode interagir com medicamentos.",
     tagsDoencas: "fadiga, estresse, baixa imunidade, performance física, energético",
+    propriedadesNutritivas:
+      "Rica em ginsenosídeos, polissacarídeos, peptídeos e vitaminas do complexo B. Contém propriedades adaptógenas, energéticas e imunoestimulantes. Melhora a resistência ao estresse e a performance física e mental.",
   },
   {
     id: 41,
@@ -450,6 +531,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pessoas com insônia, ansiedade, pressão alta ou problemas cardíacos devem evitar. Contém cafeína.",
     tagsDoencas: "fadiga, falta de concentração, obesidade, performance física, estimulante",
+    propriedadesNutritivas:
+      "Rica em cafeína, teobromina, taninos e saponinas. Contém propriedades estimulantes, termogênicas e antioxidantes. Melhora o estado de alerta e a performance física.",
   },
   {
     id: 42,
@@ -460,6 +543,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: extrato em compressas ou pomadas. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Evitar uso interno em excesso. Pode causar irritação gástrica.",
     tagsDoencas: "hemorroidas, varizes, feridas, inflamações da pele, adstringente",
+    propriedadesNutritivas:
+      "Rica em taninos, flavonoides, saponinas e óleos essenciais. Contém propriedades adstringentes, anti-inflamatórias e cicatrizantes. Útil no tratamento de problemas de pele e mucosas.",
   },
   {
     id: 43,
@@ -470,6 +555,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de flores secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome gelado.",
     contraindicacoes: "Pessoas com pressão baixa devem evitar. Pode potencializar medicamentos anti-hipertensivos.",
     tagsDoencas: "pressão alta, obesidade, retenção de líquidos, colesterol, diurético",
+    propriedadesNutritivas:
+      "Rica em antocianinas, flavonoides, ácidos orgânicos e vitamina C. Contém propriedades diuréticas, antioxidantes e hipolipemiantes. Ajuda a controlar a pressão arterial e o colesterol.",
   },
   {
     id: 44,
@@ -481,6 +568,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de casca seca para 1 xícara de água. Ferva por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Gestantes e lactantes devem evitar. Pode causar náuseas em doses altas.",
     tagsDoencas: "candidíase, infecções, baixa imunidade, problemas de pele, antifúngico",
+    propriedadesNutritivas:
+      "Rica em lapachol, xiloidina, flavonoides e quinonas. Contém propriedades imunoestimulantes, antifúngicas e antibacterianas. Auxilia no combate a infecções e fortalece o sistema imunológico.",
   },
   {
     id: 45,
@@ -491,6 +580,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: loção capilar com extrato. Chá para enxágue: 1 colher de sopa de folhas para 1 litro de água.",
     contraindicacoes: "Não usar internamente. Pode causar sudorese excessiva e problemas cardíacos.",
     tagsDoencas: "queda de cabelo, caspa, couro cabeludo oleoso, calvície, capilar",
+    propriedadesNutritivas:
+      "Rica em pilocarpina, pilocarpidina e outros alcaloides. Contém propriedades estimulantes da circulação capilar e do crescimento do cabelo. Usar apenas para uso externo.",
   },
   {
     id: 46,
@@ -501,6 +592,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de flores secas para 1 xícara de água quente. Óleo essencial: aromaterapia ou massagem.",
     contraindicacoes: "Pode causar sonolência. Evitar em excesso durante a gravidez.",
     tagsDoencas: "ansiedade, depressão, tensão, problemas de libido, relaxante",
+    propriedadesNutritivas:
+      "Contém compostos aromáticos como linalol, benzil acetato e indóis. Possui propriedades relaxantes, ansiolíticas e afrodisíacas. O aroma é conhecido por melhorar o humor e reduzir o estresse.",
   },
   {
     id: 47,
@@ -511,6 +604,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome antes das refeições.",
     contraindicacoes: "Gestantes devem evitar. Pode ser tóxica em doses altas.",
     tagsDoencas: "problemas hepáticos, má digestão, anemia, falta de apetite, digestivo",
+    propriedadesNutritivas:
+      "Rica em saponinas, flavonoides, alcaloides e taninos. Contém propriedades digestivas, hepatoprotetoras e tônicas. Auxilia na melhora do apetite e na digestão.",
   },
   {
     id: 48,
@@ -521,6 +616,8 @@ export const plantsDatabase: Plant[] = [
       "Extrato padronizado: seguir orientação médica. Chá: 1 colher de chá de raiz seca para 1 xícara de água fria (maceração).",
     contraindicacoes: "Pode causar danos hepáticos. Não usar com álcool ou medicamentos sedativos. Consulte médico.",
     tagsDoencas: "ansiedade, estresse, insônia, tensão muscular, ansiolítico",
+    propriedadesNutritivas:
+      "Rica em kavalactonas (cavas, metisticina, yangonina). Contém propriedades ansiolíticas, sedativas e relaxantes musculares. Deve ser usada com extrema cautela devido ao risco de hepatotoxicidade.",
   },
   {
     id: 49,
@@ -531,6 +628,8 @@ export const plantsDatabase: Plant[] = [
     modoPreparo: "Suco: 1 limão em água morna em jejum. Chá: casca de 1 limão para 1 xícara de água fervente.",
     contraindicacoes: "Pode causar erosão do esmalte dentário. Pessoas com úlceras gástricas devem evitar em jejum.",
     tagsDoencas: "resfriados, gripes, digestão, desintoxicação, imunidade, vitamina C",
+    propriedadesNutritivas:
+      "Excelente fonte de vitamina C, flavonoides (hesperidina, naringenina) e ácido cítrico. Contém propriedades antioxidantes, imunoestimulantes e digestivas. Auxilia na absorção de ferro.",
   },
   {
     id: 50,
@@ -543,6 +642,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes devem evitar completamente. Pode ser tóxica em doses altas. Não usar por períodos prolongados.",
     tagsDoencas: "má digestão, vermes intestinais, falta de apetite, problemas hepáticos, digestivo",
+    propriedadesNutritivas:
+      "Rica em tujona, absintina, anetol e flavonoides. Contém propriedades digestivas, vermífugas e tônicas. Usar com extrema cautela devido à toxicidade potencial.",
   },
   {
     id: 51,
@@ -553,6 +654,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de flores secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Pessoas alérgicas a plantas da família Asteraceae devem evitar.",
     tagsDoencas: "problemas digestivos, cólicas, gastrite, inflamações, digestivo",
+    propriedadesNutritivas:
+      "Rica em flavonoides (apigenina, luteolina), óleos essenciais e taninos. Contém propriedades anti-inflamatórias, antiespasmódicas e digestivas. Auxilia no alívio de dores e inflamações gastrointestinais.",
   },
   {
     id: 52,
@@ -564,6 +667,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Gargarejo ou uso tópico.",
     contraindicacoes: "Pode interferir na absorção de medicamentos orais. Tomar com intervalo de 2 horas.",
     tagsDoencas: "tosse, bronquite, inflamações da garganta, problemas de pele, emoliente",
+    propriedadesNutritivas:
+      "Rica em mucilagens, flavonoides, antocianinas e taninos. Contém propriedades emolientes, anti-inflamatórias e expectorantes. Forma uma camada protetora nas mucosas.",
   },
   {
     id: 53,
@@ -574,6 +679,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome à noite.",
     contraindicacoes: "Pode potencializar medicamentos sedativos. Evitar antes de dirigir.",
     tagsDoencas: "ansiedade, insônia, nervosismo, hiperatividade, dores de cabeça, calmante",
+    propriedadesNutritivas:
+      "Rica em flavonoides (apigenina, vitexina), alcaloides e cumarinas. Contém propriedades sedativas, ansiolíticas e hipnóticas. Auxilia no relaxamento e na melhora do sono.",
   },
   {
     id: 54,
@@ -584,6 +691,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 2 colheres de sopa de folhas frescas para 1 xícara de água fervente. Infusão por 10 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pode potencializar medicamentos sedativos. Pessoas com hipotireoidismo devem usar com cautela.",
     tagsDoencas: "ansiedade, insônia, problemas digestivos, herpes, palpitações, calmante",
+    propriedadesNutritivas:
+      "Rica em ácido rosmarínico, citral, geraniol, flavonoides e taninos. Fonte de vitamina C, cálcio e magnésio. Possui propriedades antivirais, antioxidantes e neuroprotectoras.",
   },
   {
     id: 55,
@@ -595,6 +704,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de flores secas para 1 xícara de água fervente. Infusão por 10 minutos. Uso tópico em feridas.",
     contraindicacoes: "Gestantes devem evitar. Pode causar fotossensibilidade em pessoas sensíveis.",
     tagsDoencas: "feridas, hemorragias, problemas menstruais, digestivos, cicatrizante",
+    propriedadesNutritivas:
+      "Rica em lactonas sesquiterpênicas (partenolida), flavonoides, cumarinas e taninos. Contém propriedades anti-inflamatórias, antiespasmódicas e cicatrizantes. Auxilia na coagulação sanguínea.",
   },
   {
     id: 56,
@@ -604,6 +715,8 @@ export const plantsDatabase: Plant[] = [
     modoPreparo: "Chá: 1 colher de sopa de casca seca para 1 xícara de água. Ferva por 15 minutos. Tome à noite.",
     contraindicacoes: "Pode causar sonolência excessiva. Não usar com álcool ou medicamentos sedativos.",
     tagsDoencas: "ansiedade, insônia, agitação, epilepsia, hiperatividade, sedativo",
+    propriedadesNutritivas:
+      "Rica em eritramina, eritramina, erisodina e outros alcaloides. Contém propriedades sedativas, ansiolíticas e relaxantes musculares. Auxilia no tratamento de insônia e agitação.",
   },
   {
     id: 57,
@@ -614,6 +727,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: óleo ou extrato em cremes. Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente (uso externo).",
     contraindicacoes: "Não usar internamente sem orientação médica. Gestantes e crianças devem evitar.",
     tagsDoencas: "problemas de pele, acne, caspa, diabetes, parasitas, antibacteriano",
+    propriedadesNutritivas:
+      "Rica em azadiractina, nimbina, nimbinina e flavonoides. Contém propriedades antibacterianas, antifúngicas, antivirais e inseticidas. Usar com cautela, principalmente internamente.",
   },
   {
     id: 58,
@@ -625,6 +740,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Óleo essencial: inalação.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode causar irritação em peles sensíveis.",
     tagsDoencas: "infecções respiratórias, digestão, fungos, imunidade, antibiótico",
+    propriedadesNutritivas:
+      "Rico em carvacrol, timol, ácido rosmarínico e flavonoides. Fonte de vitamina K, ferro, cálcio, magnésio e fibras. Contém potentes propriedades antibacterianas, antifúngicas e antioxidantes.",
   },
   {
     id: 59,
@@ -635,6 +752,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas que usam medicamentos para diabetes devem monitorar glicemia. Pode causar hipoglicemia.",
     tagsDoencas: "diabetes, problemas renais, cistite, infecções urinárias, hipoglicemiante",
+    propriedadesNutritivas:
+      "Rica em flavonoides, taninos, saponinas e alcaloides. Contém propriedades hipoglicemiantes, diuréticas e anti-inflamatórias. Auxilia no controle da glicemia.",
   },
   {
     id: 60,
@@ -646,6 +765,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de casca seca para 1 xícara de água. Ferva por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Gestantes e lactantes devem evitar. Pode causar náuseas e tonturas em doses altas.",
     tagsDoencas: "candidíase, infecções, baixa imunidade, problemas de pele, antifúngico",
+    propriedadesNutritivas:
+      "Rica em lapachol, xiloidina, quinonas e flavonoides. Contém propriedades antifúngicas, antibacterianas, antivirais e imunoestimulantes. Auxilia no combate a infecções e fortalece o sistema imunológico.",
   },
   {
     id: 61,
@@ -657,6 +778,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de planta inteira seca para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com cautela. Pode potencializar medicamentos hipotensores.",
     tagsDoencas: "problemas hepáticos, icterícia, diabetes, hipertensão, hepatoprotetor",
+    propriedadesNutritivas:
+      "Rica em flavonoides, ácidos fenólicos, saponinas e óleos essenciais. Contém propriedades hepatoprotetoras, anti-inflamatórias e hipoglicemiantes. Auxilia na desintoxicação do fígado.",
   },
   {
     id: 62,
@@ -668,6 +791,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: folhas frescas amassadas sobre feridas. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Pode interferir na absorção de medicamentos orais. Usar com intervalo de 2 horas.",
     tagsDoencas: "feridas, picadas de insetos, tosse, bronquite, inflamações, cicatrizante",
+    propriedadesNutritivas:
+      "Rica em mucilagens, aucubina, iridoides e flavonoides. Contém propriedades emolientes, anti-inflamatórias, cicatrizantes e expectorantes. Auxilia na cicatrização de feridas e na redução da inflamação.",
   },
   {
     id: 63,
@@ -679,6 +804,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes devem evitar completamente. Pode ser tóxico em doses altas. Não usar por períodos prolongados.",
     tagsDoencas: "tosse, bronquite, problemas digestivos, repelente de insetos, expectorante",
+    propriedadesNutritivas:
+      "Rica em pulegona, mentol, limoneno e flavonoides. Contém propriedades expectorantes, antiespasmódicas e carminativas. Usar com cautela devido à toxicidade potencial.",
   },
   {
     id: 64,
@@ -689,6 +816,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de planta inteira seca para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com cautela. Pode potencializar medicamentos diuréticos.",
     tagsDoencas: "cálculos renais, problemas renais, cistite, infecções urinárias, diurético",
+    propriedadesNutritivas:
+      "Rica em lignanas, flavonoides, taninos e alcaloides. Contém propriedades diuréticas, litolíticas, hepatoprotetoras e antivirais. Auxilia na eliminação de cálculos renais e na proteção do fígado.",
   },
   {
     id: 65,
@@ -700,6 +829,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de casca seca para 1 xícara de água. Ferva por 15 minutos. Suco da fruta: consumo direto.",
     contraindicacoes: "Pode interferir com medicamentos anticoagulantes. Evitar a casca da raiz (tóxica).",
     tagsDoencas: "diarreia, inflamações da boca, problemas cardiovasculares, envelhecimento, antioxidante",
+    propriedadesNutritivas:
+      "Rica em punicalaginas, antocianinas, flavonoides e vitamina C. Contém potentes propriedades antioxidantes, anti-inflamatórias e adstringentes. Beneficia a saúde cardiovascular e a pele.",
   },
   {
     id: 66,
@@ -711,6 +842,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Não usar folhas, casca ou frutos crus (podem ser tóxicos). Apenas flores e frutos maduros cozidos.",
     tagsDoencas: "resfriados, gripes, febre, tosse, infecções respiratórias, expectorante",
+    propriedadesNutritivas:
+      "Rica em flavonoides (antocianinas), antocianinas, ácidos fenólicos e vitaminas A e C. Contém propriedades antivirais, anti-inflamatórias e imunoestimulantes. Auxilia no combate a gripes e resfriados.",
   },
   {
     id: 67,
@@ -722,6 +855,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Gargarejo para boca.",
     contraindicacoes: "Gestantes e lactantes devem evitar. Pode reduzir a produção de leite materno.",
     tagsDoencas: "inflamações da boca, sudorese excessiva, problemas digestivos, memória, adstringente",
+    propriedadesNutritivas:
+      "Rica em cânfora, cineol, borneol, flavonoides e taninos. Contém propriedades antissépticas, adstringentes e antioxidantes. Auxilia na saúde bucal e na melhora da memória.",
   },
   {
     id: 68,
@@ -733,6 +868,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Não usar por mais de 7 dias consecutivos. Gestantes, crianças e pessoas com problemas intestinais devem evitar.",
     tagsDoencas: "constipação intestinal, laxativo, preparação para exames",
+    propriedadesNutritivas:
+      "Rica em antraquinonas (senosídeos A e B). Contém propriedades laxativas potentes. Deve ser usada com moderação e por curtos períodos devido ao risco de dependência e cólicas.",
   },
   {
     id: 69,
@@ -744,6 +881,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: folhas frescas amassadas. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Gargarejo.",
     contraindicacoes: "Pode interferir na absorção de medicamentos orais. Usar com intervalo de 2 horas.",
     tagsDoencas: "feridas, tosse, bronquite, inflamações da garganta, picadas, cicatrizante",
+    propriedadesNutritivas:
+      "Rica em mucilagens, aucubina, iridoides e flavonoides. Contém propriedades emolientes, anti-inflamatórias, cicatrizantes e expectorantes. Auxilia na cicatrização de feridas e na redução da inflamação.",
   },
   {
     id: 70,
@@ -755,6 +894,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Inalação com vapor.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode causar irritação em peles sensíveis.",
     tagsDoencas: "tosse, bronquite, infecções respiratórias, problemas digestivos, antisséptico",
+    propriedadesNutritivas:
+      "Rico em timol, carvacrol, borneol, flavonoides e taninos. Contém propriedades antissépticas, expectorantes, antioxidantes e antiespasmódicas. Eficaz contra infecções respiratórias e problemas digestivos.",
   },
   {
     id: 71,
@@ -766,6 +907,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes, lactantes e pessoas com doenças autoimunes devem evitar. Pode interagir com medicamentos.",
     tagsDoencas: "artrite, baixa imunidade, infecções, problemas digestivos, imunoestimulante",
+    propriedadesNutritivas:
+      "Rica em alcaloides oxindólicos (alcaloides da unha-de-gato), flavonoides e taninos. Contém propriedades imunoestimulantes, anti-inflamatórias e antioxidantes. Auxilia no tratamento de artrite e infecções.",
   },
   {
     id: 72,
@@ -778,6 +921,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pode interagir com medicamentos diuréticos e anti-hipertensivos. Usar folhas secas (frescas causam irritação).",
     tagsDoencas: "artrite, alergias, anemia, queda de cabelo, problemas de próstata, depurativo",
+    propriedadesNutritivas:
+      "Rica em vitaminas (A, C, K), minerais (ferro, cálcio, magnésio, potássio), flavonoides e compostos fenólicos. Contém propriedades diuréticas, depurativas, anti-inflamatórias e remineralizantes. Auxilia no tratamento de anemia e problemas de pele.",
   },
   {
     id: 73,
@@ -789,6 +934,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pode causar sonolência excessiva. Não usar com álcool ou medicamentos sedativos. Evitar dirigir.",
     tagsDoencas: "insônia, ansiedade, nervosismo, estresse, tensão muscular, sedativo",
+    propriedadesNutritivas:
+      "Rica em ácidos valerênicos, valerianina, GABA e flavonoides. Contém propriedades sedativas, ansiolíticas e hipnóticas. Auxilia no relaxamento e na melhora da qualidade do sono.",
   },
   {
     id: 74,
@@ -799,6 +946,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Gestantes devem evitar. Pode potencializar medicamentos sedativos.",
     tagsDoencas: "ansiedade, depressão, problemas digestivos, dores de cabeça, calmante",
+    propriedadesNutritivas:
+      "Rica em verbenalina, iridoides, flavonoides e taninos. Contém propriedades calmantes, digestivas e anti-inflamatórias. Auxilia no alívio de ansiedade e problemas digestivos.",
   },
   {
     id: 75,
@@ -809,6 +958,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Uso tópico em compressas.",
     contraindicacoes: "Pode causar náuseas em doses altas. Evitar uso interno prolongado.",
     tagsDoencas: "tosse, bronquite, problemas de pele, eczema, inflamações, expectorante",
+    propriedadesNutritivas:
+      "Rica em saponinas, flavonoides, mucilagens e antocianinas. Contém propriedades emolientes, expectorantes e anti-inflamatórias. Auxilia no alívio de tosse e inflamações.",
   },
   {
     id: 76,
@@ -820,6 +971,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Gestantes devem evitar (pode causar aborto). Doses altas são tóxicas. Muito caro, use com parcimônia.",
     tagsDoencas: "depressão, ansiedade, problemas menstruais, digestão, antidepressivo",
+    propriedadesNutritivas:
+      "Rico em crocina, safranal, picrocrocina e flavonoides. Contém propriedades antidepressivas, ansiolíticas e antioxidantes. É um dos temperos mais caros do mundo.",
   },
   {
     id: 77,
@@ -830,6 +983,8 @@ export const plantsDatabase: Plant[] = [
     modoPreparo: "Consumo in natura: em saladas. Suco: 1 xícara de folhas frescas batidas com água. Tome em jejum.",
     contraindicacoes: "Pessoas com problemas renais devem evitar. Pode causar irritação gástrica em excesso.",
     tagsDoencas: "anemia, escorbuto, problemas respiratórios, imunidade, vitaminas",
+    propriedadesNutritivas:
+      "Excelente fonte de vitaminas A, C, K, cálcio, ferro, magnésio e potássio. Contém glucosinolatos e antioxidantes. Auxilia na prevenção de anemia e fortalece o sistema imunológico.",
   },
   {
     id: 78,
@@ -840,6 +995,8 @@ export const plantsDatabase: Plant[] = [
       "Suco: 1 talo fresco batido com água. Chá: 1 colher de sopa de sementes para 1 xícara de água fervente.",
     contraindicacoes: "Gestantes devem evitar as sementes. Pode causar fotossensibilidade.",
     tagsDoencas: "pressão alta, retenção de líquidos, artrite, problemas renais, diurético",
+    propriedadesNutritivas:
+      "Rico em fitoquímicos (ftalídeos), vitaminas (K, C, A) e minerais (potássio, sódio). Contém propriedades diuréticas, anti-inflamatórias e hipotensoras. Auxilia no controle da pressão arterial.",
   },
   {
     id: 79,
@@ -851,6 +1008,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pode potencializar medicamentos anticoagulantes. Evitar antes de cirurgias. Pode causar mau hálito.",
     tagsDoencas: "infecções, pressão alta, colesterol, problemas circulatórios, imunidade, antibiótico",
+    propriedadesNutritivas:
+      "Rico em alicina, compostos sulfurados, vitaminas (C, B6) e minerais (manganês, selênio). Contém potentes propriedades antibacterianas, antivirais, antifúngicas e antioxidantes. Auxilia na saúde cardiovascular.",
   },
   {
     id: 80,
@@ -861,6 +1020,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Frutos: consumo in natura ou suco.",
     contraindicacoes: "Pessoas que usam medicamentos para diabetes devem monitorar glicemia.",
     tagsDoencas: "diabetes, problemas cardiovasculares, menopausa, envelhecimento, antioxidante",
+    propriedadesNutritivas:
+      "Rica em antocianinas, flavonoides, resveratrol, vitaminas (C, K) e minerais (ferro, potássio). Contém propriedades antioxidantes, anti-inflamatórias e hipoglicemiantes. Beneficia a saúde cardiovascular e o controle do açúcar no sangue.",
   },
   {
     id: 81,
@@ -872,6 +1033,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: decocção das folhas para lavagens. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Pode causar reações alérgicas. Evitar uso interno prolongado.",
     tagsDoencas: "feridas, úlceras, inflamações urogenitais, problemas de pele, cicatrização",
+    propriedadesNutritivas:
+      "Rica em taninos, flavonoides, terpenos e óleos essenciais. Contém propriedades adstringentes, anti-inflamatórias e cicatrizantes. Usar principalmente para uso tópico.",
   },
   {
     id: 82,
@@ -882,6 +1045,8 @@ export const plantsDatabase: Plant[] = [
     modoPreparo: "Uso tópico: folhas frescas amassadas diretamente sobre feridas. Pode ser usado como cataplasma.",
     contraindicacoes: "Apenas para uso externo. Não há contraindicações conhecidas para uso tópico.",
     tagsDoencas: "feridas, queimaduras, cortes, calos, problemas de pele, cicatrização",
+    propriedadesNutritivas:
+      "Rica em mucilagens, flavonoides e ácidos orgânicos. Contém propriedades cicatrizantes, anti-inflamatórias e hidratantes. Auxilia na regeneração da pele e na cicatrização de feridas.",
   },
   {
     id: 83,
@@ -892,6 +1057,8 @@ export const plantsDatabase: Plant[] = [
       "Consumo in natura: em saladas. Uso tópico: folhas frescas amassadas sobre feridas. Suco: folhas batidas com água.",
     contraindicacoes: "Pessoas com cálculos renais devem evitar (rica em oxalatos).",
     tagsDoencas: "inflamações, problemas de pele, feridas, queimaduras, nutrição, ômega-3",
+    propriedadesNutritivas:
+      "Excelente fonte de ácidos graxos ômega-3, vitaminas (A, C, E) e minerais (potássio, magnésio). Contém propriedades anti-inflamatórias e antioxidantes. Rica em antioxidantes que combatem o envelhecimento celular.",
   },
   {
     id: 84,
@@ -902,6 +1069,8 @@ export const plantsDatabase: Plant[] = [
       "Água de berinjela: 1 berinjela cortada em 1 litro de água, deixe de molho por 12 horas. Tome em jejum.",
     contraindicacoes: "Pessoas com artrite podem ter sensibilidade (contém solanina). Consumir com moderação.",
     tagsDoencas: "colesterol alto, diabetes, obesidade, problemas cardiovasculares, hipocolesterolemiante",
+    propriedadesNutritivas:
+      "Rica em fibras, antocianinas (nas variedades roxas), vitaminas (B1, B6) e minerais (potássio, magnésio). Contém propriedades hipocolesterolemiantes e antioxidantes. Auxilia no controle do colesterol e da glicemia.",
   },
   {
     id: 85,
@@ -913,6 +1082,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Óleo das sementes: uso tópico ou suplemento.",
     contraindicacoes: "Contém alcaloides pirrolizidínicos. Não usar internamente por períodos prolongados.",
     tagsDoencas: "problemas de pele, eczema, artrite, síndrome pré-menstrual, inflamações, ômega-6",
+    propriedadesNutritivas:
+      "O óleo das sementes é rico em ácido gama-linolênico (GLA), um ômega-6. Contém propriedades anti-inflamatórias e benéficas para a pele. Usar com cautela devido à presença de alcaloides pirrolizidínicos.",
   },
   {
     id: 86,
@@ -923,6 +1094,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "ALTAMENTE TÓXICA se usada internamente. Apenas inalação com orientação médica. Pode causar hemorragias.",
     tagsDoencas: "sinusite, rinite, congestão nasal, problemas respiratórios, descongestionante",
+    propriedadesNutritivas:
+      "Contém saponinas e outros compostos com propriedades irritantes e descongestionantes. Seu uso é restrito à inalação e deve ser feito com extrema cautela e orientação profissional.",
   },
   {
     id: 87,
@@ -933,6 +1106,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Fruto: consumo in natura (rico em vitamina C).",
     contraindicacoes: "A castanha crua pode causar irritação. Pessoas alérgicas a nozes devem ter cuidado.",
     tagsDoencas: "diarreia, feridas, inflamações da boca, problemas de pele, adstringente",
+    propriedadesNutritivas:
+      "O fruto é rico em vitamina C. As folhas contêm taninos e flavonoides com propriedades adstringentes e anti-inflamatórias. A castanha é rica em gorduras e minerais.",
   },
   {
     id: 88,
@@ -943,6 +1118,8 @@ export const plantsDatabase: Plant[] = [
       "Caldo de cana: extraído da cana fresca. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Diabéticos devem evitar o caldo (alto teor de açúcar). Consumir com moderação.",
     tagsDoencas: "fadiga, problemas renais, icterícia, hidratação, energético",
+    propriedadesNutritivas:
+      "O caldo é rico em sacarose, fornecendo energia rápida. As folhas contêm compostos com propriedades diuréticas. Contém minerais como cálcio e potássio.",
   },
   {
     id: 89,
@@ -953,6 +1130,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 2-3 folhas frescas ou 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com moderação. Pode potencializar medicamentos sedativos.",
     tagsDoencas: "ansiedade, insônia, problemas digestivos, febre, dores de cabeça, calmante",
+    propriedadesNutritivas:
+      "Rico em citral, geraniol, limoneno, flavonoides e vitamina C. Contém propriedades sedativas, digestivas e antioxidantes. Fonte de óleos essenciais com ação calmante.",
   },
   {
     id: 90,
@@ -964,6 +1143,8 @@ export const plantsDatabase: Plant[] = [
     contraindicacoes:
       "Pessoas com problemas renais graves devem evitar (rica em oxalatos). Pode ser tóxica para alguns.",
     tagsDoencas: "escorbuto, problemas renais, febre, hipertensão, imunidade, vitamina C",
+    propriedadesNutritivas:
+      "Fruto rico em vitamina C, fibras e antioxidantes. As folhas contêm compostos com propriedades diuréticas e anti-inflamatórias. Deve ser consumida com moderação por pessoas com problemas renais.",
   },
   {
     id: 91,
@@ -975,6 +1156,8 @@ export const plantsDatabase: Plant[] = [
       "Consumo in natura: em saladas e pratos. Chá: 1 colher de sopa de folhas frescas para 1 xícara de água quente.",
     contraindicacoes: "Pessoas que usam anticoagulantes devem consumir com moderação.",
     tagsDoencas: "problemas digestivos, anemia, resfriados, imunidade, vitaminas",
+    propriedadesNutritivas:
+      "Fonte de vitaminas A, C, K, folato e minerais como cálcio e ferro. Contém compostos sulfurados com propriedades antioxidantes. Auxilia na digestão e no fortalecimento do sistema imunológico.",
   },
   {
     id: 92,
@@ -986,6 +1169,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Consumo in natura: folhas em saladas.",
     contraindicacoes: "Gestantes devem evitar. Pode causar reações alérgicas em pessoas sensíveis.",
     tagsDoencas: "problemas hepáticos, digestão, diabetes, depuração do sangue, hepatoprotetor",
+    propriedadesNutritivas:
+      "Rica em inulina, lactucina, lactucopricina, vitaminas (A, K) e minerais (potássio). Contém propriedades hepatoprotetoras, digestivas e depurativas. Auxilia na saúde do fígado e na regulação da glicemia.",
   },
   {
     id: 93,
@@ -997,6 +1182,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Consumo in natura: folhas em pratos e saladas.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com moderação. Pode causar fotossensibilidade.",
     tagsDoencas: "problemas digestivos, gases, náuseas, desintoxicação, digestivo",
+    propriedadesNutritivas:
+      "Rico em vitaminas (A, C, K), minerais (ferro, cálcio, magnésio) e antioxidantes. Contém propriedades digestivas, carminativas e quelantes de metais pesados. Auxilia na eliminação de toxinas.",
   },
   {
     id: 94,
@@ -1007,6 +1194,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Tempero: adicionar a alimentos durante o cozimento.",
     contraindicacoes: "Pessoas com diabetes devem monitorar glicemia (pode reduzir açúcar no sangue).",
     tagsDoencas: "problemas digestivos, gases, cólicas, má digestão, flatulência, digestivo",
+    propriedadesNutritivas:
+      "Rico em fibras, vitaminas (B1, B2, B3) e minerais (ferro, magnésio, cálcio). Contém propriedades digestivas, carminativas e antiespasmódicas. Auxilia na redução de gases e flatulência.",
   },
   {
     id: 95,
@@ -1018,6 +1207,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de sementes para 1 xícara de água fervente. Infusão por 10 minutos. Tome após as refeições.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode causar fotossensibilidade.",
     tagsDoencas: "problemas digestivos, gases, cólicas em bebês, produção de leite materno, digestivo",
+    propriedadesNutritivas:
+      "Rico em carvona, limoneno, flavonoides e vitamina C. Fonte de cálcio, ferro, manganês e fibras. Contém propriedades carminativas, antiespasmódicas e galactagogas. Auxilia na digestão e na produção de leite.",
   },
   {
     id: 96,
@@ -1029,6 +1220,8 @@ export const plantsDatabase: Plant[] = [
       "Uso tópico: pomada ou gel com extrato. Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente.",
     contraindicacoes: "Gestantes devem evitar. Pode causar irritação em peles muito sensíveis.",
     tagsDoencas: "dores musculares, artrite, contusões, reumatismo, inflamações, anti-inflamatório",
+    propriedadesNutritivas:
+      "Rica em diterpenos (cordiabranina A), flavonoides e taninos. Contém propriedades anti-inflamatórias e analgésicas potentes. Utilizada topicamente para alívio de dores e inflamações.",
   },
   {
     id: 97,
@@ -1040,6 +1233,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Uso tópico: folhas frescas amassadas sobre feridas.",
     contraindicacoes: "Não usar por períodos prolongados. Gestantes e crianças devem evitar. Pode causar diarreia.",
     tagsDoencas: "constipação, problemas de pele, feridas, eczema, depuração do sangue, laxativo",
+    propriedadesNutritivas:
+      "Contém antraquinonas e outros compostos com propriedades laxativas e depurativas. Usar com cautela e por curtos períodos. O uso tópico pode auxiliar na cicatrização.",
   },
   {
     id: 98,
@@ -1050,6 +1245,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Tome antes das refeições.",
     contraindicacoes: "Gestantes devem evitar. Pode causar sonolência em doses altas.",
     tagsDoencas: "problemas hepáticos, má digestão, gastrite, inflamações, digestivo",
+    propriedadesNutritivas:
+      "Rica em flavonoides, taninos, saponinas e óleos essenciais. Contém propriedades hepatoprotetoras, digestivas e anti-inflamatórias. Fonte de compostos bioativos específicos.",
   },
   {
     id: 99,
@@ -1061,6 +1258,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de chá de folhas secas para 1 xícara de água fervente. Infusão por 10 minutos. Tome 2-3 vezes ao dia.",
     contraindicacoes: "Gestantes devem evitar em grandes quantidades. Pode potencializar medicamentos sedativos.",
     tagsDoencas: "problemas digestivos, ansiedade, insônia, dores de cabeça, resfriados, calmante",
+    propriedadesNutritivas:
+      "Rica em terpineno, sabineno, linalol e flavonoides. Fonte de vitamina A, C, ferro e cálcio. Contém propriedades sedativas, digestivas e antioxidantes.",
   },
   {
     id: 100,
@@ -1072,6 +1271,8 @@ export const plantsDatabase: Plant[] = [
       "Chá: 1 colher de sopa de folhas secas para 1 xícara de água fervente. Infusão por 15 minutos. Frutos: consumo in natura.",
     contraindicacoes: "Pessoas com pressão baixa devem usar com cautela. Pode potencializar medicamentos hipotensores.",
     tagsDoencas: "diarreia, problemas digestivos, febre, hipertensão, diabetes, adstringente",
+    propriedadesNutritivas:
+      "Rica em taninos, flavonoides, óleos essenciais e vitamina C. Os frutos contêm antocianinas, carotenoides e fibras. Propriedades adstringentes, antioxidantes e hipoglicemiantes.",
   },
 ]
 

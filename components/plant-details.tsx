@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Heart, AlertTriangle, Leaf, FlaskConical, Info } from "lucide-react"
+import { Heart, AlertTriangle, Leaf, FlaskConical, Info, Sparkles } from "lucide-react"
 import { addToFavorites, removeFromFavorites, isFavorite } from "@/lib/favorites"
 import type { Plant } from "@/lib/plants-data"
 
@@ -65,6 +65,18 @@ export function PlantDetails({ plant }: PlantDetailsProps) {
           </CardHeader>
           <CardContent>
             <p className="text-foreground leading-relaxed">{plant.indicacoes}</p>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/10 dark:to-emerald-900/10 border-green-200 dark:border-green-800">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2 text-green-700 dark:text-green-300">
+              <Sparkles className="h-5 w-5" />
+              Propriedades Nutritivas
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <p className="text-green-800 dark:text-green-200 leading-relaxed">{plant.propriedadesNutritivas}</p>
           </CardContent>
         </Card>
 
