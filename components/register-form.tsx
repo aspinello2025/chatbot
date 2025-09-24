@@ -98,8 +98,32 @@ export function RegisterForm({ onRegisterSuccess, onBackToLogin }: RegisterFormP
                 <strong>Importante:</strong> Clique no link do email para ativar sua conta antes de fazer login.
               </p>
             </div>
+            <div className="bg-green-50 dark:bg-green-900/20 p-4 rounded-lg border border-green-200 dark:border-green-800">
+              <p className="text-sm text-green-800 dark:text-green-200 mb-2">
+                <strong>Para ativar sua conta:</strong>
+              </p>
+              <p className="text-xs text-green-700 dark:text-green-300 mb-3">
+                1. Verifique o alerta que apareceu na tela com o link de confirmação
+                <br />
+                2. Ou use o botão abaixo para confirmação imediata
+              </p>
+              <Button
+                onClick={async () => {
+                  const { forceConfirmEmail } = await import("@/lib/user-database")
+                  const result = await forceConfirmEmail(formData.email)
+                  if (result.success) {
+                    alert("Email confirmado! Agora você pode fazer login.")
+                    onBackToLogin()
+                  }
+                }}
+                size="sm"
+                className="w-full text-xs"
+              >
+                Confirmar Email Agora
+              </Button>
+            </div>
             <p className="text-sm text-muted-foreground">
-              Não recebeu o email? Verifique sua caixa de spam ou tente novamente.
+              Não viu o alerta? Recarregue a página ou use o botão de confirmação acima.
             </p>
             <Button onClick={onBackToLogin} variant="outline" className="w-full bg-transparent">
               Voltar para Login

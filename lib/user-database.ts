@@ -9,7 +9,7 @@ export interface UserAccount {
   name: string
   createdAt: number
   isEmailConfirmed: boolean
-  confirmationToken?: string // Adicionando token de confirmação
+  confirmationToken?: string
 }
 
 export interface AuthSession {
@@ -52,6 +52,8 @@ export function createUser(
       users.push(newUser)
       localStorage.setItem(USERS_KEY, JSON.stringify(users))
 
+      console.log("[v0] Usuário criado:", { email, name, id: newUser.id })
+
       const emailResult = await sendConfirmationEmail(email, name, confirmationToken)
 
       if (emailResult.success) {
@@ -71,6 +73,7 @@ export function createUser(
         })
       }
     } catch (error) {
+      console.error("[v0] Erro ao criar usuário:", error)
       resolve({ success: false, message: "Erro ao criar usuário" })
     }
   })
@@ -82,13 +85,19 @@ export function authenticateUser(
 ): Promise<{ success: boolean; message: string; user?: UserAccount }> {
   return new Promise((resolve) => {
     try {
+      console.log("[v0] Tentativa de login para:", email)
       const users = getUsers()
+      console.log("[v0] Usuários cadastrados:", users.length)
+
       const user = users.find((u) => u.email === email && u.password === password)
 
       if (!user) {
+        console.log("[v0] Usuário não encontrado ou senha incorreta")
         resolve({ success: false, message: "Email ou senha incorretos" })
         return
       }
+
+      console.log("[v0] Usuário encontrado:", { email: user.email, isEmailConfirmed: user.isEmailConfirmed })
 
       if (!user.isEmailConfirmed) {
         resolve({
@@ -98,8 +107,10 @@ export function authenticateUser(
         return
       }
 
+      console.log("[v0] Login bem-sucedido para:", email)
       resolve({ success: true, message: "Login realizado com sucesso", user })
     } catch (error) {
+      console.error("[v0] Erro ao fazer login:", error)
       resolve({ success: false, message: "Erro ao fazer login" })
     }
   })
@@ -108,10 +119,12 @@ export function authenticateUser(
 export function confirmEmail(token: string): Promise<{ success: boolean; message: string }> {
   return new Promise((resolve) => {
     try {
+      console.log("[v0] Tentativa de confirmação de email com token:", token)
       const users = getUsers()
       const userIndex = users.findIndex((u) => u.confirmationToken === token)
 
       if (userIndex === -1) {
+        console.log("[v0] Token não encontrado")
         resolve({ success: false, message: "Token de confirmação inválido ou expirado" })
         return
       }
@@ -122,8 +135,34 @@ export function confirmEmail(token: string): Promise<{ success: boolean; message
 
       localStorage.setItem(USERS_KEY, JSON.stringify(users))
 
+      console.log("[v0] Email confirmado para usuário:", users[userIndex].email)
       resolve({ success: true, message: "Email confirmado com sucesso! Agora você pode fazer login." })
     } catch (error) {
+      console.error("[v0] Erro ao confirmar email:", error)
+      resolve({ success: false, message: "Erro ao confirmar email" })
+    }
+  })
+}
+
+export function forceConfirmEmail(email: string): Promise<{ success: boolean; message: string }> {
+  return new Promise((resolve) => {
+    try {
+      const users = getUsers()
+      const userIndex = users.findIndex((u) => u.email === email)
+
+      if (userIndex === -1) {
+        resolve({ success: false, message: "Usuário não encontrado" })
+        return
+      }
+
+      users[userIndex].isEmailConfirmed = true
+      users[userIndex].confirmationToken = undefined
+      localStorage.setItem(USERS_KEY, JSON.stringify(users))
+
+      console.log("[v0] Email confirmado manualmente para:", email)
+      resolve({ success: true, message: "Email confirmado com sucesso!" })
+    } catch (error) {
+      console.error("[v0] Erro ao confirmar email manualmente:", error)
       resolve({ success: false, message: "Erro ao confirmar email" })
     }
   })
@@ -148,6 +187,7 @@ export function saveAuthSession(user: UserAccount): void {
     loginTime: Date.now(),
   }
   localStorage.setItem(AUTH_KEY, JSON.stringify(session))
+  console.log("[v0] Sessão salva para:", user.email)
 }
 
 export function getAuthSession(): AuthSession | null {
@@ -163,6 +203,7 @@ export function getAuthSession(): AuthSession | null {
     const twentyFourHours = 24 * 60 * 60 * 1000
     if (Date.now() - session.loginTime > twentyFourHours) {
       localStorage.removeItem(AUTH_KEY)
+      console.log("[v0] Sessão expirada para:", session.email)
       return null
     }
 
@@ -173,6 +214,10 @@ export function getAuthSession(): AuthSession | null {
 }
 
 export function clearAuthSession(): void {
+  const session = getAuthSession()
+  if (session) {
+    console.log("[v0] Limpando sessão para:", session.email)
+  }
   localStorage.removeItem(AUTH_KEY)
 }
 

@@ -26,15 +26,19 @@ export function LoginForm({ onLogin, onShowRegister }: LoginFormProps) {
     setLoading(true)
 
     try {
+      console.log("[v0] Tentando fazer login com:", email)
       const result = await authenticateUser(email, password)
 
       if (result.success && result.user) {
+        console.log("[v0] Login bem-sucedido, salvando sessão")
         saveAuthSession(result.user)
         onLogin(result.user.email, result.user.name)
       } else {
+        console.log("[v0] Falha no login:", result.message)
         setError(result.message)
       }
     } catch (error) {
+      console.error("[v0] Erro no processo de login:", error)
       setError("Erro ao fazer login. Tente novamente.")
     }
 
@@ -96,7 +100,38 @@ export function LoginForm({ onLogin, onShowRegister }: LoginFormProps) {
                 </Button>
               </div>
             </div>
-            {error && <div className="text-sm text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">{error}</div>}
+            {error && (
+              <div className="text-sm text-red-600 bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
+                {error}
+                {error.includes("confirme seu email") && (
+                  <div className="mt-3 pt-3 border-t border-red-200 dark:border-red-800">
+                    <p className="text-xs text-red-500 mb-2">Precisa confirmar seu email?</p>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="outline"
+                      className="text-xs h-7 w-full bg-transparent"
+                      onClick={async () => {
+                        if (!email) {
+                          alert("Digite seu email primeiro")
+                          return
+                        }
+                        const { forceConfirmEmail } = await import("@/lib/user-database")
+                        const result = await forceConfirmEmail(email)
+                        if (result.success) {
+                          setError("")
+                          alert("Email confirmado! Tente fazer login novamente.")
+                        } else {
+                          alert("Email não encontrado. Verifique se você se cadastrou com este email.")
+                        }
+                      }}
+                    >
+                      Confirmar Email Automaticamente
+                    </Button>
+                  </div>
+                )}
+              </div>
+            )}
             <Button type="submit" className="w-full" disabled={loading}>
               {loading ? "Entrando..." : "Entrar"}
             </Button>
